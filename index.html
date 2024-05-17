@@ -1,0 +1,35 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Combiner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Element Combiner</h1>
+        
+        <form id="combinationForm">
+            <input type="text" id="combinationInput" placeholder="Enter combination (e.g., water + earth = plant)">
+            <button type="submit">Add Combination</button>
+        </form>
+        
+        <ul id="combinationList"></ul>
+        
+        <input type="file" id="jsonFileInput">
+        
+        <button id="clearStorage">Clear Storage</button>
+
+        <div id="guide" class="guide hidden">
+            <h2>How to Make <span id="targetElement"></span></h2>
+            <ul id="guideSteps"></ul>
+            <button id="closeGuide">Close</button>
+        </div>
+
+        <div id="loading" class="hidden">Loading...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
