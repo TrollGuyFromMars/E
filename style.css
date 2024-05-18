@@ -87,6 +87,7 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: auto; /* Make the guide section scrollable */
 }
 
 .guide.hidden {
@@ -101,6 +102,8 @@ button {
     list-style-type: none;
     padding: 0;
     margin-bottom: 20px;
+    max-height: 70vh; /* Limit the height of the steps list */
+    overflow-y: auto; /* Make the steps list scrollable */
 }
 
 #guideSteps li {
