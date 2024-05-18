@@ -1,0 +1,605 @@
+[
+  {
+    "name": "Water",
+    "combinations": []
+  },
+  {
+    "name": "Fire",
+    "combinations": []
+  },
+  {
+    "name": "Wind",
+    "combinations": []
+  },
+  {
+    "name": "Earth",
+    "combinations": []
+  },
+  {
+    "name": "Steam",
+    "combinations": ["Water + Fire"]
+  },
+  {
+    "name": "Wave",
+    "combinations": ["Water + Wind"]
+  },
+  {
+    "name": "Plant",
+    "combinations": ["Water + Earth"]
+  },
+  {
+    "name": "Lake",
+    "combinations": ["Water + Water"]
+  },
+  {
+    "name": "Volcano",
+    "combinations": ["Fire + Fire"]
+  },
+  {
+    "name": "Smoke",
+    "combinations": ["Fire + Wind"]
+  },
+  {
+    "name": "Lava",
+    "combinations": ["Fire + Earth"]
+  },
+  {
+    "name": "Tornado",
+    "combinations": ["Wind + Wind"]
+  },
+  {
+    "name": "Dust",
+    "combinations": ["Wind + Earth"]
+  },
+  {
+    "name": "Mountain",
+    "combinations": ["Earth + Earth"]
+  },
+  {
+    "name": "Cloud",
+    "combinations": ["Water + Steam"]
+  },
+  {
+    "name": "Tsunami",
+    "combinations": ["Water + Wave", "Water + Tornado"]
+  },
+  {
+    "name": "Swamp",
+    "combinations": ["Water + Plant"]
+  },
+  {
+    "name": "Ocean",
+    "combinations": ["Water + Lake"]
+  },
+  {
+    "name": "Fog",
+    "combinations": ["Water + Smoke"]
+  },
+  {
+    "name": "Stone",
+    "combinations": ["Water + Lava"]
+  },
+  {
+    "name": "Mud",
+    "combinations": ["Water + Dust"]
+  },
+  {
+    "name": "Engine",
+    "combinations": ["Fire + Steam"]
+  },
+  {
+    "name": "Ash",
+    "combinations": ["Fire + Dust"]
+  },
+  {
+    "name": "Sand",
+    "combinations": ["Earth + Wave"]
+  },
+  {
+    "name": "Tree",
+    "combinations": ["Earth + Plant"]
+  },
+  {
+    "name": "Planet",
+    "combinations": ["Earth + Dust"]
+  },
+  {
+    "name": "Storm",
+    "combinations": ["Wind + Wave", "Wind + Lake"]
+  },
+  {
+    "name": "Dandelion",
+    "combinations": ["Wind + Plant"]
+  },
+  {
+    "name": "Eruption",
+    "combinations": ["Wind + Volcano"]
+  },
+  {
+    "name": "Sandstorm",
+    "combinations": ["Wind + Dust"]
+  },
+  {
+    "name": "Avalanche",
+    "combinations": ["Wind + Mountain"]
+  },
+  {
+    "name": "Surf",
+    "combinations": ["Steam + Wave"]
+  },
+  {
+    "name": "Tea",
+    "combinations": ["Steam + Plant"]
+  },
+  {
+    "name": "Seaweed",
+    "combinations": ["Wave + Plant"]
+  },
+  {
+    "name": "Lily",
+    "combinations": ["Plant + Lake"]
+  },
+  {
+    "name": "Incense",
+    "combinations": ["Plant + Smoke"]
+  },
+  {
+    "name": "Pollen",
+    "combinations": ["Plant + Dust"]
+  },
+  {
+    "name": "Island",
+    "combinations": ["Lake + Volcano"]
+  },
+  {
+    "name": "Fjord",
+    "combinations": ["Lake + Mountain"]
+  },
+  {
+    "name": "Dust Storm",
+    "combinations": ["Tornado + Dust"]
+  },
+  {
+    "name": "Hurricane",
+    "combinations": ["Tornado + Tornado"]
+  },
+  {
+    "name": "Mountain Range",
+    "combinations": ["Mountain + Mountain"]
+  },
+  {
+    "name": "Rain",
+    "combinations": ["Water + Cloud", "Water + Storm", "Earth + Cloud", "Steam + Cloud", "Steam + Storm", "Wave + Cloud", "Plant + Cloud", "Lake + Cloud", "Volcano + Cloud", "Tornado + Cloud", "Dust + Cloud", "Cloud + Cloud", "Cloud + Ocean", "Cloud + Fog", "Cloud + Stone", "Cloud + Sand", "Cloud + Tree", "Cloud + Storm", "Cloud + Dandelion", "Cloud + Tea", "Cloud + Pollen", "Cloud + Mountain Range", "Fog + Storm", "Storm + Incense"]
+  },
+  {
+    "name": "Marsh",
+    "combinations": ["Water + Swamp", "Lake + Swamp", "Swamp + Ocean"]
+  },
+  {
+    "name": "Fish",
+    "combinations": ["Water + Ocean", "Ocean + Fog"]
+  },
+  {
+    "name": "Ice",
+    "combinations": ["Water + Fog", "Water + Avalanche"]
+  },
+  {
+    "name": "Rock",
+    "combinations": ["Water + Stone", "Earth + Stone", "Wave + Stone", "Mountain + Stone", "Stone + Tree", "Stone + Avalanche"]
+  },
+  {
+    "name": "Beach",
+    "combinations": ["Water + Sand", "Earth + Surf", "Wave + Mud", "Wave + Sand", "Lake + Sand", "Tsunami + Sand", "Ocean + Mud", "Ocean + Sand", "Ocean+ Mountain Range", "Mud + Sand", "Mud + Surf", "Sand + Surf", "Sand + Seaweed", "Sand + Fjord", "Surf + Mountain Range"]
+  },
+  {
+    "name": "River",
+    "combinations": ["Water + Tree"]
+  },
+  {
+    "name": "Wine",
+    "combinations": ["Water + Dandelion", "Dandelion + Tea"]
+  },
+  {
+    "name": "Oasis",
+    "combinations": ["Water + Sandstorm", "Lake + Sandstorm", "Swamp + Sandstorm"]
+  },
+  {
+    "name": "Kelp",
+    "combinations": ["Water + Seaweed", "Earth + Seaweed", "Dust + Seaweed", "Ocean + Seaweed", "Fog + Seaweed", "Ash + Seaweed", "Tree + Seaweed", "Dandelion + Seaweed", "Seaweed + Pollen", "Seaweed + Fjord", "Seaweed + Dust Storm", "Seaweed + Mountain Range"]
+  },
+  {
+    "name": "Pond",
+    "combinations": ["Water + Lily"]
+  },
+  {
+    "name": "Perfume",
+    "combinations": ["Water + Incense", "Mud + Incense", "Lily + Incense", "Incense + Incense", "Incense + Pollen"]
+  },
+  {
+    "name": "Honey",
+    "combinations": ["Water + Pollen", "Mountain + Pollen", "Tsunami + Pollen", "Tea + Pollen"]
+  },
+  {
+    "name": "Ship",
+    "combinations": ["Water + Island"]
+  },
+  {
+    "name": "Whale",
+    "combinations": ["Water + Fjord"]
+  },
+  {
+    "name": "Lightning",
+    "combinations": ["Fire + Cloud", "Tree + Storm"]
+  },
+  {
+    "name": "Dragon",
+    "combinations": ["Fire + Swamp", "Steam + Swamp", "Smoke + Swamp"]
+  },
+  {
+    "name": "Brick",
+    "combinations": ["Fire + Mud"]
+  },
+  {
+    "name": "Phoenix",
+    "combinations": ["Fire + Ash", "Fire + Lily", "Lake + Ash", "Ash + Lily", "Ash + Fjord"]
+  },
+  {
+    "name": "Glass",
+    "combinations": ["Fire + Sand", "Steam + Sand", "Volcano + Sand", "Lava + Sand", "Ash + Sand", "Sand + Eruption"]
+  },
+  {
+    "name": "Sun",
+    "combinations": ["Fire + Planet", "Planet + Dandelion"]
+  },
+  {
+    "name": "Chai",
+    "combinations": ["Fire + Tea"]
+  },
+  {
+    "name": "Sushi",
+    "combinations": ["Fire + Seaweed", "Steam + Seaweed", "Volcano + Seaweed", "Smoke + Seaweed", "Mountain + Seaweed", "Cloud + Seaweed", "Tsunami + Seaweed", "Swamp + Seaweed", "Tea + Lily", "Seaweed + Incense", "Seaweed + Island", "Seaweed + Hurricane"]
+  },
+  {
+    "name": "Mist",
+    "combinations": ["Wind + Swamp", "Earth + Swamp", "Lake + Fog", "Tsunami + Fog", "Fog + Fjord"]
+  },
+  {
+    "name": "Windmill",
+    "combinations": ["Wind + Engine"]
+  },
+  {
+    "name": "Dune",
+    "combinations": ["Wind + Sand", "Earth + Sandstorm", "Sand + Storm", "Sand + Lily", "Sandstorm + Mountain Range"]
+  },
+  {
+    "name": "Leaf",
+    "combinations": ["Wind + Tree"]
+  },
+  {
+    "name": "Seed",
+    "combinations": ["Wind + Dandelion", "Tornado + Dandelion", "Storm + Dandelion", "Dandelion + Hurricane"]
+  },
+  {
+    "name": "Snow",
+    "combinations": ["Wind + Avalanche", "Steam + Avalanche", "Smoke + Avalanche", "Dust + Avalanche", "Mountain + Cloud", "Mountain + Avalanche", "Mountain + Lily", "Cloud + Avalanche", "Fog + Avalanche", "Ash + Avalanche", "Sand + Avalanche", "Storm + Avalanche", "Dandelion + Avalanche", "Avalanche + Avalanche", "Avalanche + Tea", "Avalanche + Dust Storm"]
+  },
+  {
+    "name": "Surfing",
+    "combinations": ["Wind + Surf", "Steam + Surf", "Volcano + Surf", "Lava + Surf", "Cloud + Surf", "Planet + Surf", "Surf + Tea"]
+  },
+  {
+    "name": "Kite",
+    "combinations": ["Wind + Tea", "Wind + Seaweed"]
+  },
+  {
+    "name": "Flower",
+    "combinations": ["Wind + Lily", "Earth + Dandelion", "Earth + Lily", "Earth + Pollen", "Steam + Lily", "Steam + Pollen", "Plant + Lily", "Plant + Pollen", "Fog + Lily", "Tree + Lily", "Dandelion + Lily", "Lily + Lily", "Lily + Pollen", "Pollen + Pollen", "Pollen + Fjord"]
+  },
+  {
+    "name": "Allergy",
+    "combinations": ["Wind + Pollen", "Tornado + Pollen", "Dust + Pollen", "Swamp + Pollen", "Fog + Pollen", "Storm + Pollen", "Dandelion + Pollen", "Pollen + Surf", "Pollen + Dust Storm", "Pollen + Hurricane"]
+  },
+  {
+    "name": "Aeolus",
+    "combinations": ["Wind + Mountain Range"]
+  },
+  {
+    "name": "Clay",
+    "combinations": ["Earth + Mud", "Lava + Mud", "Dust + Mud", "Stone + Mud", "Mud + Mud", "Mud + Ash", "Mud + Eruption"]
+  },
+  {
+    "name": "Tractor",
+    "combinations": ["Earth + Engine", "Mud + Engine"]
+  },
+  {
+    "name": "Soil",
+    "combinations": ["Earth + Ash"]
+  },
+  {
+    "name": "Desert",
+    "combinations": ["Earth + Sand", "Smoke + Sand", "Dust + Mountain Range", "Swamp + Sand", "Fog + Sand", "Sand + Sand", "Sand + Tree", "Sand + Planet", "Sand + Sandstorm", "Sand + Island"]
+  },
+  {
+    "name": "Forest",
+    "combinations": ["Earth + Tree", "Plant + Tree", "Plant + Mountain Range", "Mountain + Tree", "Tsunami + Tree", "Tree + Tree", "Tree + Mountain Range"]
+  },
+  {
+    "name": "Moon",
+    "combinations": ["Earth + Planet", "Mountain + Planet", "Planet + Mountain Range"]
+  },
+  {
+    "name": "Landslide",
+    "combinations": ["Earth + Avalanche"]
+  },
+  {
+    "name": "Teapot",
+    "combinations": ["Earth + Tea", "Steam + Tea", "Lake + Tea", "Engine + Tea", "Tree + Tea", "Tea + Island"]
+  },
+  {
+    "name": "Continent",
+    "combinations": ["Earth + Island", "Island + Island"]
+  },
+  {
+    "name": "Land",
+    "combinations": ["Earth + Fjord"]
+  },
+  {
+    "name": "Titanic",
+    "combinations": ["Steam + Tsunami"]
+  },
+  {
+    "name": "Geysir",
+    "combinations": ["Steam + Stone", "Eruption + Fjord"]
+  },
+  {
+    "name": "Train",
+    "combinations": ["Steam + Engine", "Steam + Mountain Range", "Mountain + Engine", "Swamp + Engine", "Engine + Island", "Engine + Mountain Range"]
+  },
+  {
+    "name": "Steampunk",
+    "combinations": ["Steam + Planet"]
+  },
+  {
+    "name": "Geyser",
+    "combinations": ["Steam + Eruption"]
+  },
+  {
+    "name": "Steamboat",
+    "combinations": ["Steam + Fjord", "Steam + Hurricane", "Engine + Lily"]
+  },
+  {
+    "name": "Surfboard",
+    "combinations": ["Wave + Tree", "Plant + Surf", "Ash + Surf", "Dandelion + Surf", "Surf + Lily", "Surf + Island"]
+  },
+  {
+    "name": "Surfer",
+    "combinations": ["Wave + Surf", "Smoke + Surf", "Tsunami + Surf", "Ocean + Surf", "Fog + Surf", "Storm + Surf", "Surf + Seaweed", "Surf + Hurricane"]
+  },
+  {
+    "name": "Mermaid",
+    "combinations": ["Wave + Lily", "Ocean + Lily", "Seaweed + Lily"]
+  },
+  {
+    "name": "Venus Flyrap",
+    "combinations": ["Plant + Swamp"]
+  },
+  {
+    "name": "Coral",
+    "combinations": ["Plant + Ocean", "Ocean + Tree", "Ocean + Pollen", "Stone + Seaweed", "Seaweed + Seaweed"]
+  },
+  {
+    "name": "Mushroom",
+    "combinations": ["Plant + Fog"]
+  },
+  {
+    "name": "Fossil",
+    "combinations": ["Plant + Stone"]
+  },
+  {
+    "name": "Car",
+    "combinations": ["Plant + Engine"]
+  },
+  {
+    "name": "Tobacco",
+    "combinations": ["Plant + Ash"]
+  },
+  {
+    "name": "Cactus",
+    "combinations": ["Plant + Sand", "Plant + Sandstorm", "Plant + Dust Storm"]
+  },
+  {
+    "name": "Weed",
+    "combinations": ["Plant + Dandelion"]
+  },
+  {
+    "name": "Snowman",
+    "combinations": ["Plant + Avalanche", "Avalanche + Seaweed", "Avalanche + Incense"]
+  },
+  {
+    "name": "Palm",
+    "combinations": ["Plant + Hurricane", "Tree + Sandstorm"]
+  },
+  {
+    "name": "Lightning",
+    "combinations": ["Fire + Cloud", "Tree + Storm"]
+  },
+  {
+    "name": "Dragon",
+    "combinations": ["Fire + Swamp", "Steam + Swamp", "Smoke + Swamp"]
+  },
+  {
+    "name": "Brick",
+    "combinations": ["Fire + Mud"]
+  },
+  {
+    "name": "Phoenix",
+    "combinations": ["Fire + Ash", "Fire + Lily", "Lake + Ash", "Ash + Lily", "Ash + Fjord"]
+  },
+  {
+    "name": "Glass",
+    "combinations": ["Fire + Sand", "Steam + Sand", "Volcano + Sand", "Lava + Sand", "Ash + Sand", "Sand + Eruption"]
+  },
+  {
+    "name": "Sun",
+    "combinations": ["Fire + Planet", "Planet + Dandelion"]
+  },
+  {
+    "name": "Chai",
+    "combinations": ["Fire + Tea"]
+  },
+  {
+    "name": "Sushi",
+    "combinations": ["Fire + Seaweed", "Steam + Seaweed", "Volcano + Seaweed", "Smoke + Seaweed", "Mountain + Seaweed", "Cloud + Seaweed", "Tsunami + Seaweed", "Swamp + Seaweed", "Tea + Lily", "Seaweed + Incense", "Seaweed + Island", "Seaweed + Hurricane"]
+  },
+  {"name": "Mist",
+    "combinations": ["Wind + Swamp", "Earth + Swamp", "Lake + Fog", "Tsunami + Fog", "Fog + Fjord"]
+  },
+  {
+    "name": "Windmill",
+    "combinations": ["Wind + Engine"]
+  },
+  {
+    "name": "Dune",
+    "combinations": ["Wind + Sand", "Earth + Sandstorm", "Sand + Storm", "Sand + Lily", "Sandstorm + Mountain Range"]
+  },
+  {
+    "name": "Leaf",
+    "combinations": ["Wind + Tree"]
+  },
+  {
+    "name": "Seed",
+    "combinations": ["Wind + Dandelion", "Tornado + Dandelion", "Storm + Dandelion", "Dandelion + Hurricane"]
+  },
+  {
+    "name": "Snow",
+    "combinations": ["Wind + Avalanche", "Steam + Avalanche", "Smoke + Avalanche", "Dust + Avalanche", "Mountain + Cloud", "Mountain + Avalanche", "Mountain + Lily", "Cloud + Avalanche", "Fog + Avalanche", "Ash + Avalanche", "Sand + Avalanche", "Storm + Avalanche", "Dandelion + Avalanche", "Avalanche + Avalanche", "Avalanche + Tea", "Avalanche + Dust Storm"]
+  },
+  {
+    "name": "Surfing",
+    "combinations": ["Wind + Surf", "Steam + Surf", "Volcano + Surf", "Lava + Surf", "Cloud + Surf", "Planet + Surf", "Surf + Tea"]
+  },
+  {
+    "name": "Kite",
+    "combinations": ["Wind + Tea", "Wind + Seaweed"]
+  },
+  {
+    "name": "Flower",
+    "combinations": ["Wind + Lily", "Earth + Dandelion", "Earth + Lily", "Earth + Pollen", "Steam + Lily", "Steam + Pollen", "Plant + Lily", "Plant + Pollen", "Fog + Lily", "Tree + Lily", "Dandelion + Lily", "Lily + Lily", "Lily + Pollen", "Pollen + Pollen", "Pollen + Fjord"]
+  },
+  {
+    "name": "Allergy",
+    "combinations": ["Wind + Pollen", "Tornado + Pollen", "Dust + Pollen", "Swamp + Pollen", "Fog + Pollen", "Storm + Pollen", "Dandelion + Pollen", "Pollen + Surf", "Pollen + Dust Storm", "Pollen + Hurricane"]
+  },
+  {
+    "name": "Aeolus",
+    "combinations": ["Wind + Mountain Range"]
+  },
+  {
+    "name": "Clay",
+    "combinations": ["Earth + Mud", "Lava + Mud", "Dust + Mud", "Stone + Mud", "Mud + Mud", "Mud + Ash", "Mud + Eruption"]
+  },
+  {
+    "name": "Tractor",
+    "combinations": ["Earth + Engine", "Mud + Engine"]
+  },
+  {
+    "name": "Soil",
+    "combinations": ["Earth + Ash"]
+  },
+  {
+    "name": "Desert",
+    "combinations": ["Earth + Sand", "Smoke + Sand", "Dust + Mountain Range", "Swamp + Sand", "Fog + Sand", "Sand + Sand", "Sand + Tree", "Sand + Planet", "Sand + Sandstorm", "Sand + Island"]
+  },
+  {
+    "name": "Forest",
+    "combinations": ["Earth + Tree", "Plant + Tree", "Plant + Mountain Range", "Mountain + Tree", "Tsunami + Tree", "Tree + Tree", "Tree + Mountain Range"]
+  },
+  {
+    "name": "Moon",
+    "combinations": ["Earth + Planet", "Mountain + Planet", "Planet + Mountain Range"]
+  },
+  {
+    "name": "Landslide",
+    "combinations": ["Earth + Avalanche"]
+  },
+  {
+    "name": "Teapot",
+    "combinations": ["Earth + Tea", "Steam + Tea", "Lake + Tea", "Engine + Tea", "Tree + Tea", "Tea + Island"]
+  },
+  {
+    "name": "Continent",
+    "combinations": ["Earth + Island", "Island + Island"]
+  },
+  {
+    "name": "Land",
+    "combinations": ["Earth + Fjord"]
+  },
+  {
+    "name": "Titanic",
+    "combinations": ["Steam + Tsunami"]
+  },
+  {
+    "name": "Geysir",
+    "combinations": ["Steam + Stone", "Eruption + Fjord"]
+  },
+  {
+    "name": "Train",
+    "combinations": ["Steam + Engine", "Steam + Mountain Range", "Mountain + Engine", "Swamp + Engine", "Engine + Island", "Engine + Mountain Range"]
+  },
+  {
+    "name": "Steampunk",
+    "combinations": ["Steam + Planet"]
+  },
+  {
+    "name": "Geyser",
+    "combinations": ["Steam + Eruption"]
+  },
+  {
+    "name": "Steamboat",
+    "combinations": ["Steam + Fjord", "Steam + Hurricane", "Engine + Lily"]
+  },
+  {
+    "name": "Surfboard",
+    "combinations": ["Wave + Tree", "Plant + Surf", "Ash + Surf", "Dandelion + Surf", "Surf + Lily", "Surf + Island"]
+  },
+  {
+    "name": "Surfer",
+    "combinations": ["Wave + Surf", "Smoke + Surf", "Tsunami + Surf", "Ocean + Surf", "Fog + Surf", "Storm + Surf", "Surf + Seaweed", "Surf + Hurricane"]
+  },
+  {
+    "name": "Mermaid",
+    "combinations": ["Wave + Lily", "Ocean + Lily", "Seaweed + Lily"]
+  },
+  {
+    "name": "Venus Flyrap",
+    "combinations": ["Plant + Swamp"]
+  },
+  {
+    "name": "Coral",
+    "combinations": ["Plant + Ocean", "Ocean + Tree", "Ocean + Pollen", "Stone + Seaweed", "Seaweed + Seaweed"]
+  },
+  {
+    "name": "Mushroom",
+    "combinations": ["Plant + Fog"]
+  },
+  {
+    "name": "Fossil",
+    "combinations": ["Plant + Stone"]
+  },
+  {
+    "name": "Car",
+    "combinations": ["Plant + Engine"]
+  },
+  {
+    "name": "Tobacco",
+    "combinations": ["Plant + Ash"]
+  },
+  {
+    "name": "Cactus",
+    "combinations": ["Plant + Sand", "Plant + Sandstorm", "Plant + Dust Storm"]
+  },
+  {
+    "name": "Weed",
+    "combinations": ["Plant + Dandelion"]
+  }
+]
