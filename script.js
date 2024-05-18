@@ -1,160 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const combinationForm = document.getElementById('combinationForm');
-    const combinationInput = document.getElementById('combinationInput');
-    const combinationList = document.getElementById('combinationList');
-    const jsonFileInput = document.getElementById('jsonFileInput');
-    const clearStorageButton = document.getElementById('clearStorage');
-    const guide = document.getElementById('guide');
-    const guideSteps = document.getElementById('guideSteps');
-    const closeGuideButton = document.getElementById('closeGuide');
-    const targetElementSpan = document.getElementById('targetElement');
-    const loading = document.getElementById('loading');
 
-    const combinationsKey = 'combinations';
-    const elementsKey = 'elements';
-    const batchSize = 20;
-    let loadedCount = 0;
-
-    // Load combinations from localStorage
-    function loadCombinations(initialLoad = false) {
-        const storedCombinations = JSON.parse(localStorage.getItem(combinationsKey)) || [];
-        if (initialLoad) {
-            loadedCount = 0;
-            combinationList.innerHTML = '';
-        }
-        const nextBatch = storedCombinations.slice(loadedCount, loadedCount + batchSize);
-        nextBatch.forEach(combination => {
-            const li = document.createElement('li');
-            const [ingredients, result] = combination.split(' = ');
-            const ingredientsLinks = ingredients.split(' + ').map(ingredient => `<a href="#" data-element="${ingredient.trim()}">${ingredient.trim()}</a>`).join(' + ');
-            const resultLink = `<a href="#" data-element="${result.trim()}">${result.trim()}</a>`;
-            li.innerHTML = `${ingredientsLinks} = ${resultLink}`;
-            combinationList.appendChild(li);
+   // Load elements from JSON file
+    fetch('elements.json')
+      .then(response => response.json())
+      .then(elements => {
+        const elementsDiv = document.getElementById('elements');
+        elements.forEach(element => {
+          const div = document.createElement('div');
+          div.className = 'element';
+          div.textContent = element.name;
+          div.onclick = () => showCombinations(element);
+          elementsDiv.appendChild(div);
         });
-        loadedCount += batchSize;
+      })
+      .catch(error => console.error('Error loading elements:', error));
+
+    function showCombinations(element) {
+      const combinationsDiv = document.getElementById('combinations');
+      combinationsDiv.innerHTML = `<h2>${element.name} Combinations</h2>`;
+      if (element.combinations && element.combinations.length > 0) {
+        element.combinations.forEach((combination, index) => {
+          combinationsDiv.innerHTML += `<p><strong>Step ${index + 1}:</strong> ${combination}</p>`;
+        });
+      } else {
+        combinationsDiv.innerHTML += '<p>No combinations found for this element.</p>';
+      }
     }
 
-    // Save a new combination to localStorage
-    function saveCombination(combination) {
-        const storedCombinations = JSON.parse(localStorage.getItem(combinationsKey)) || [];
-        storedCombinations.push(combination);
-        localStorage.setItem(combinationsKey, JSON.stringify(storedCombinations));
-    }
-
-    // Handle form submission
-    combinationForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const combination = combinationInput.value.trim();
-        if (combination) {
-            saveCombination(combination);
-            loadCombinations(true);
-            combinationInput.value = '';
+    document.getElementById('searchInput').addEventListener('input', function(event) {
+      const searchTerm = event.target.value.toLowerCase();
+      const elementsDiv = document.getElementById('elements');
+      const elements = elementsDiv.getElementsByClassName('element');
+      for (const element of elements) {
+        const elementName = element.textContent.toLowerCase();
+        if (elementName.includes(searchTerm)) {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
         }
+      }
     });
-
-    // Handle JSON file upload
-    jsonFileInput.addEventListener('change', (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = (event) => {
-                try {
-                    const json = JSON.parse(event.target.result);
-                    if (json.elements && json.recipes) {
-                        localStorage.setItem(elementsKey, JSON.stringify(json.elements));
-                        localStorage.setItem(combinationsKey, JSON.stringify([])); // Clear previous combinations
-                        Object.keys(json.recipes).forEach(result => {
-                            json.recipes[result].forEach(recipe => {
-                                const combination = recipe.map(element => element.text.toLowerCase()).join(' + ') + ' = ' + result.toLowerCase();
-                                saveCombination(combination);
-                            });
-                        });
-                        loadCombinations(true);
-                    } else {
-                        alert('Invalid JSON format');
-                    }
-                } catch (err) {
-                    alert('Error parsing JSON');
-                }
-            };
-            reader.readAsText(file);
-        }
-    });
-
-    // Handle clear storage
-    clearStorageButton.addEventListener('click', () => {
-        localStorage.removeItem(combinationsKey);
-        localStorage.removeItem(elementsKey);
-        loadCombinations(true);
-    });
-
-    // Show guide
-    combinationList.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') {
-            e.preventDefault();
-            const targetElement = e.target.getAttribute('data-element');
-            targetElementSpan.textContent = targetElement;
-            guideSteps.innerHTML = '';
-            const storedCombinations = JSON.parse(localStorage.getItem(combinationsKey)) || [];
-            const steps = findSteps(targetElement, storedCombinations);
-            steps.forEach(step => {
-                const li = document.createElement('li');
-                li.textContent = step;
-                guideSteps.appendChild(li);
-            });
-            guide.classList.remove('hidden');
-
-            // Scroll to the guide
-            guide.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-
-    // Close guide
-    closeGuideButton.addEventListener('click', () => {
-        guide.classList.add('hidden');
-    });
-
-    // Find steps to create target element
-    function findSteps(target, combinations) {
-        const steps = [];
-        const visited = new Set();
-
-        function dfs(element) {
-            if (visited.has(element)) {
-                return;
-            }
-            visited.add(element);
-            const combination = combinationMap.get(element);
-            if (combination) {
-                steps.push(combination + ' = ' + element);
-                const ingredients = combination.split(' + ');
-                ingredients.forEach(ingredient => dfs(ingredient.trim()));
-            }
-        }
-
-        const combinationMap = new Map(combinations.map(comb => {
-            const [ingredients, result] = comb.split(' = ');
-            return [result.trim(), ingredients.trim()];
-        }));
-
-        dfs(target);
-        return steps;
-    }
-
-    // Initial load
-    loadCombinations(true);
-
-    // Set up intersection observer for lazy loading
-    const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-            loadCombinations();
-        }
-    }, {
-        root: document.querySelector('.container'),
-        rootMargin: '0px',
-        threshold: 1.0
-    });
-
-    // Observe the loading div
-    observer.observe(loading);
-});
